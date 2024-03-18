@@ -1,0 +1,243 @@
+:root{
+--Reed: hsl(1, 90%, 64%);
+--Blue: hsl(219, 85%, 26%);
+
+--White: hsl(0, 0%, 100%);
+--Very-light-grayish-blue: hsl(210, 60%, 98%);
+--Light-grayish-blue-1: hsl(211, 68%, 94%);
+--Light-grayish-blue-2: hsl(205, 33%, 90%);
+--Grayish-blue: hsl(219, 14%, 63%);
+--Dark-grayish-blue: hsl(219, 12%, 42%);
+--Very-dark-blue: hsl(224, 21%, 14%);
+}
+
+
+html{
+    font-family: "Plus Jakarta Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+    
+}
+body{
+    background-color: var(--Very-light-grayish-blue);
+
+}
+.main-container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.main {
+    background-color: White;
+    max-width: 800px;
+    width: 100%;
+    border-radius: 10px;
+    padding: 10px;
+}
+.mark-read{
+    background-color: transparent;
+    border: none;
+    color: var(--Dark-grayish-blue);
+    font-weight: 800;
+    margin-right: 10px;
+    font-size: 16px;
+    margin-right: 0;
+    padding-right: 0;
+}
+h3{
+    color: var(--Grayish-blue);
+}
+
+.main *{
+    padding: 0 10px;
+}
+.main-word{
+    padding: 0px;
+}
+.header{
+    display: flex;
+    justify-content:space-between;
+    padding: 0 20px;
+    margin-top: 10px;
+}
+.number-of-notif{
+    color: White;
+    background-color: var(--Blue);
+    border-radius: 20%;
+}
+.notif-container{
+    padding: 0;
+}
+.notification{
+    padding: 10px;
+    margin: 10px 20px;
+    border-radius: 10px;
+}
+
+.main-info-container *{
+    display:contents;
+}
+.main-info-container span{
+    color: var(--Dark-grayish-blue)
+}
+.inner-notif{
+    display: flex;
+    padding: 10px;
+
+}
+.text-info{
+    display: flex;
+    flex-direction: column;
+
+}
+.name{
+    font-weight: 800;
+    padding: 0;
+    padding-right: 10px;
+}
+
+.message{
+    padding: 10px;
+    border: 1px var(--Dark-grayish-blue) solid;
+    margin-left: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+}
+.picture-container{
+    margin-left: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 42px;
+    height: 42px;
+    padding: 0;
+    border-radius: 5px;
+    background-color: var(--Light-grayish-blue-2)
+}
+.picture{
+    aspect-ratio: 1;
+    height: 42px;
+    transition: height 0.2s ease;
+}
+.time{
+    display: block; 
+    margin: 0;
+    padding: 0;
+    padding-left: 10px;
+    padding-top: 5px;
+    color: var(--Dark-grayish-blue)
+}
+.group{
+    font-weight: 800;
+    color: var(--Blue);
+}
+#read{
+    background-color: var(--White);
+}
+#unread{
+    background-color: var(--Very-light-grayish-blue);
+}
+.notification#unread .main-info-container::after {
+    content: ""; 
+    display: inline-block; 
+    width: 10px; 
+    height: 10px; 
+    background-color: var(--Reed); 
+    border-radius: 50%; 
+    margin-left: 5px; 
+    box-shadow: 0 0 1px 1px rgba(236, 91, 81, 0.5); 
+}
+
+.avatar{
+    aspect-ratio: 1;
+    height: 42px;
+}
+.post{
+    color: var(--Dark-grayish-blue);
+    font-weight: 800;
+}
+.picture, .message, .group, .name, .post, .mark-read{
+    cursor: pointer;
+}
+.message:hover{
+    background-color: var(--Light-grayish-blue-1);
+}
+.post:hover, .name:hover{
+    color: var(--Blue)
+}
+.picture:hover{
+    height: 38px;
+}
+@media screen and (max-width: 768px) {
+    body{
+        font-size: 14px;
+    }
+    div, span{
+        font-size: 14px;
+    }
+    .number-of-notif{
+        font-size: 16px;
+    }
+    .main{
+        padding: 0px;
+    }
+    .main-container{
+        height: auto;
+    }
+    .header{
+        padding: 0;
+        padding-left: 10px;
+    }
+    .notification{
+        margin-left: 10px;
+        margin-right: 10px;
+
+    }
+    .avatar{
+        padding: 0;
+    }
+    .text-info{
+        padding: 0;
+    }
+    .header{
+        margin-top: 20px;
+    }
+}
+@media screen and (max-width: 375px) {
+    body{
+        font-size: 14px;
+    }
+    div, span{
+        font-size: 13px;
+    }
+    .number-of-notif{
+        font-size: 16px;
+    }
+    .main{
+        padding: 0px;
+    }
+    .main-container{
+        height: auto;
+    }
+    .header{
+        padding: 0;
+        padding-left: 10px;
+    }
+    .notification{
+        margin-left: 10px;
+        margin-right: 10px;
+
+    }
+    .avatar{
+        padding: 0;
+    }
+    .text-info{
+        padding: 0;
+    }
+    .header{
+        margin-top: 20px;
+    }
+}

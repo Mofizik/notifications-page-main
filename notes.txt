@@ -1,0 +1,13 @@
+<div class="notification" id="unread">
+        <div class="inner-notif">
+          <img src="" alt="" class="avatar">
+          <div class="text-info">
+            <div class="main-info-container">
+              <div class="name"></div>
+              <div class="post"></div>
+            </div>
+            <div class="time"></div>
+            
+          </div>
+        </div>
+      </div>

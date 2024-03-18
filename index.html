@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Notifications page</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <div class="main-container">
+    <div class="main">
+      <div class="header">
+        <h2 class="main-word">Notifications <span class="number-of-notif">3</span></h2>
+        <button class="mark-read" id="mark-read">Mark all as read</button>
+        
+     </div>
+     <div class="notif-container" id="notif-container">
+      <div class="notification" id="unread">
+        <div class="inner-notif">
+          <img src="assets/images/avatar-mark-webber.webp" class="avatar">
+      <div class="text-info">
+          <div class="main-info-container">
+              <div class="name">Mark Webber</div><span> reacted to your recent post </span><div class="post">My first tournament today!</div>
+          </div>
+            <div class="time">1m ago</div>
+        </div>
+      </div>
+        
+      </div>
+      <div class="notification" id="unread">
+        <div class="inner-notif">
+          <img src="assets/images/avatar-angela-gray.webp" class="avatar">
+          <div class="text-info">
+            <div class="main-info-container"><div class="name"> Gray</div> <span>followed you</span></div>
+            <div class="time">5m ago</div>
+          </div>
+        </div>
+      </div>
+      <div class="notification" id="unread">
+        <div class="inner-notif">
+          <img src="assets/images/avatar-jacob-thompson.webp" alt="" class="avatar">
+          <div class="text-info">
+            <div class="main-info-container">
+              <div class="name">Jacob Thompson </div><span>has joined your group </span>
+              <div class="group">Chess Club</div>
+            </div>
+            <div class="time">1 day ago</div>
+            
+          </div>
+        </div>
+      </div>
+     
+      <div class="notification" id="unread">
+        <div class="inner-notif">
+          <img src="assets/images/avatar-rizky-hasanuddin.webp" alt="" class="avatar">
+          <div class="text-info">
+            <div class="main-info-container">
+              <div class="name">Rizky Hasanuddin </div><span>sent you a private message</span>
+              <div class="post"></div>
+            </div>
+            <div class="time">5 days ago</div>
+            <div class="message">Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and 
+              I'm already having lots of fun and improving my game.</div>
+            
+          </div>
+        </div>
+      </div>
+    
+      <div class="notification" id="unread">
+        <div class="inner-notif">
+          <img src="assets/images/avatar-kimberly-smith.webp" alt="" class="avatar">
+          <div class="text-info">
+            <div class="main-info-container">
+              <div class="name">Kimberly Smith </div><span>commented on your picture</span>
+            </div>
+            <div class="time">1 week ago</div>
+            
+          </div>
+          <div class="picture-container">
+          <img class="picture" src="assets/images/image-chess.webp" alt="">
+        </div>
+        </div>
+        
+      </div>
+     
+      <div class="notification" id="unread">
+        <div class="inner-notif">
+          <img src="assets/images/avatar-nathan-peterson.webp" alt="" class="avatar">
+          <div class="text-info">
+            <div class="main-info-container">
+              <div class="name">Nathan Peterson </div><span>reacted to your recent post</span>
+              <div class="post">5 end-game strategies to increase your win rate</div>
+            </div>
+            <div class="time">2 weeks ago</div>
+            
+          </div>
+        </div>
+      </div>
+    
+      <div class="notification" id="unread">
+        <div class="inner-notif">
+          <img src="assets/images/avatar-anna-kim.webp" alt="" class="avatar">
+          <div class="text-info">
+            <div class="main-info-container">
+              <div class="name">Anna Kim </div><span>left the group</span>
+              <div class="group">Chess Club</div>
+            </div>
+            <div class="time">2 weeks ago</div>
+            
+            </div>
+        </div>
+      </div>
+    </div>
+      <script>
+        document.getElementById('mark-read').addEventListener('click', function() {
+        var notifications = document.querySelectorAll('.notification');
+        notifications.forEach(function(notification, index) {
+            notification.id = 'read';
+         });
+      });
+      document.addEventListener('DOMContentLoaded', function() {
+        document.getElementById('notif-container').addEventListener('click', function(event) {
+            let target = event.target.closest('.notification');
+            if (target && this.contains(target)) {
+                changeID(target);
+            }
+        });
+
+        function changeID(element) {
+            element.id = "read";
+        }
+      });
+      </script>
+     
+    
+
+      
+    
+
+      
+    
+    </div>
+</div>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">lololosa4ka</a>.
+  </div>
+<script src="assets/script.js"></script>
+</body>
+</html>
